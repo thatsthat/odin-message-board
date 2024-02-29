@@ -1,14 +1,15 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block title
+  h1.header= title
+  //- p Welcome to #{title}
 
 block content 
-  ul
-    each val, ind in messages
-      li= 'Message ' + ind
-          ul
-            li= 'Text: ' + val.text
-            li= 'User: ' + val.user
-            li= 'Added: ' + val.added.toDateString()
+  div.chatRoom
+    ul.chatMessages
+      each val, ind in messages
+        //li= 'Message ' + ind
+        ul.message
+          li= 'Text: ' + val.text
+          li= 'User: ' + val.user
+          li= 'Added: ' + val.added.toDateString()
