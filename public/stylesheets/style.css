@@ -35,3 +35,16 @@ li {
   flex-direction: column;
   list-style-type: none;
 }
+
+.userName {
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.timeStamp {
+  font-size: 0.8rem;
+  color: black;
+  margin: 0.5rem -0.3rem -0.5rem 0rem;
+}

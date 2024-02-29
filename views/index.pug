@@ -10,6 +10,6 @@ block content
       each val, ind in messages
         //li= 'Message ' + ind
         ul.message
-          li= 'Text: ' + val.text
-          li= 'User: ' + val.user
-          li= 'Added: ' + val.added.toDateString()
+          li.userName= val.user
+          li= val.text
+          li.timeStamp= val.added.toLocaleTimeString("en-GB", {hour: '2-digit', minute:'2-digit'})
