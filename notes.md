@@ -25,10 +25,7 @@ added: new Date()
 
 5. Next, in your index template (in the "views" folder) loop through the messages array using whichever templating language you selected and for each one, display the user, text and the date the message was added. Don’t forget to make your messages available to your template by including it in the res.render ‘locals’ object (e.g. res.render('index', { title: "Mini Messageboard", messages: messages })).
 
-1.
-1.
-
-1. Next let’s set up the new message form. In the router add a router.get() for the "/new" route and point it to a template named "form". In the views directory create your form template. Add a heading, 2 inputs (one for the author’s name and one for the message text) and a submit button. To have the form make a network request you will need to define it with both a method and an action like so:
+6. Next let’s set up the new message form. In the router add a router.get() for the "/new" route and point it to a template named "form". In the views directory create your form template. Add a heading, 2 inputs (one for the author’s name and one for the message text) and a submit button. To have the form make a network request you will need to define it with both a method and an action like so:
 
 <form method="POST" action="/new">
    put your inputs and buttons in here!
@@ -46,4 +43,7 @@ messages.push({text: messageText, user: messageUser, added: new Date()});
 
 11. At this point, you should be able to visit /new (it might be a good idea to add a link to that route on your index page), fill out the form, submit it and then see it show up on the index page!
 
-12. You’ll learn how to deploy your app to the web in the next lesson, don’t forget to come back and submit it to the submissions below once you’re done!
+12. make it work with a different route and web
+13. move the new route into the index route
+
+14. You’ll learn how to deploy your app to the web in the next lesson, don’t forget to come back and submit it to the submissions below once you’re done!

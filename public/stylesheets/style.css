@@ -3,6 +3,8 @@ body {
   font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #bdbdbd !important;
   background-color: #303030 !important;
+  display: flex;
+  flex-direction: column;
 }
 
 li {
@@ -27,6 +29,9 @@ li {
   background-color: #212121;
   padding: 0.5rem 1rem 1rem 1rem;
   border-radius: 20px;
+  width: 80vw;
+  max-width: 600px;
+  align-self: center;
 }
 
 .chatMessages {
@@ -39,6 +44,7 @@ li {
 
 .userName {
   font-weight: bold;
+  font-size: 0.9rem;
   color: black;
   text-align: left;
   margin: -0.5rem 0rem 0.5rem -0.3rem;
@@ -49,4 +55,27 @@ li {
   color: black;
   margin: 0.5rem -0.3rem -0.5rem 0rem;
   text-align: right;
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.userNameDialog {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.messageDialog {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.sendButton {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
 }

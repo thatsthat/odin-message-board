@@ -1,14 +1,15 @@
 extends layout
 
-block content
+block title
   h1= title
-  p Welcome to #{title}
 
-block content 
-  ul
-    each val, ind in messages
-      li= 'Message ' + ind
-          ul
-            li= 'Text: ' + val.text
-            li= 'User: ' + val.user
-            li= 'Added: ' + val.added.toDateString()
+block content
+  form.messageForm(method="POST" action="/new")
+    div.userNameDialog
+      label User name:
+      input(placeholder='enter username', type='text', name='user', value='', onchange='{handleChange}')
+    div.messageDialog
+      label Message:
+      input(placeholder='write your message here', type='text', name='message', value='', onchange='{handleChange}')
+    .sendButton 
+      input(type='submit', value='Submit')
